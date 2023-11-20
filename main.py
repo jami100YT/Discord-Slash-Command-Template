@@ -14,12 +14,12 @@ tree = discord.app_commands.CommandTree(client)
 # sync the slash command to your server
 @client.event
 async def on_ready():
-    await tree.sync(guild=discord.Object(id=1085581168486912050))
+    await tree.sync(guild=discord.Object(id=Your Guild Id))
     # print "ready" in the console when the bot is ready to work
     print("ready")
 
 # make the slash command
-@tree.command(name="hello", description="description", guild=discord.Object(id=1085581168486912050))
+@tree.command(name="hello", description="description", guild=discord.Object(id=Your Guild Id))
 async def slash_command(interaction: discord.Interaction):    
     await interaction.response.send_message("Hello World")
 
